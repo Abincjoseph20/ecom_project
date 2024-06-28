@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+{% extends "ecom_app1/base.html" %}
+{% block title %}
+extend
+{% endblock %}
+<html lang="en">
+<head>
+    {% block content %}
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--<h1><a href="{% url 'home' %}">home</a></h1>-->
+<!--<h3>-->
+<!--    <img src="{{ Product.pro_image.url }}" style="width:300px;height:300px;">-->
+<!--</h3>-->
+
+<!--<h5>-->
+<!--    <li>{{ Product.pro_id }}</li>-->
+<!--    <br>-->
+<!--    <li>{{ Product.pro_name }}</li>-->
+<!--    <br>-->
+<!--    <li>Rs.{{ Product.pro_prize }}</li>-->
+<!--    <br>-->
+<!--    <li>{{ Product.pro_details }}</li>-->
+<!--</h5>-->
+
+
+<div class="card text-center mx-3 my-3" style="width: 18rem; display:inline-block  ">
+    <img src="{{ Product.pro_image.url }}" style=" width:200px ; height:200px" >
+  <div class="card-body">
+    <h5 class="card-title">{{ Product.pro_name }}</h5>
+      <h5 class="card-title">RS.{{ Product.pro_prize }}</h5>
+    <p class="card-text">{{ Product.pro_details }}</p>
+    <a href="#" class="btn btn-primary">Buy Now</a>
+  </div>
+</div>
+</body>
+{% endblock %}
+</html>
